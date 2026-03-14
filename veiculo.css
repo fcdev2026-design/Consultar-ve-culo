@@ -1,0 +1,74 @@
+      :root {
+            --fc-blue: #003399;
+            --fc-blue-dark: #002673;
+            --fc-yellow: #FFD400;
+            --fc-red: #ED1C24;
+            --fc-green: #22c55e;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --text-muted: #64748b;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); margin: 0; overflow-x: hidden; }
+
+        /* Estilos de Validação Rigorosos */
+        .input-error { border: 2px solid var(--fc-red) !important; background-color: #fff5f5 !important; }
+        .input-success { border: 2px solid var(--fc-green) !important; background-color: #f0fdf4 !important; }
+
+        .menu-icon {
+            position: fixed; top: 20px; right: 20px; z-index: 1001;
+            background: var(--fc-blue); color: white; border: none;
+            width: 48px; height: 48px; border-radius: 12px; cursor: pointer; 
+            font-size: 24px; display: flex; align-items: center; justify-content: center;
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar {
+            position: fixed; top: 0; right: -300px; width: 300px; height: 100%;
+            background: var(--fc-blue); z-index: 1000; transition: 0.4s;
+            padding: 100px 20px 20px; box-sizing: border-box;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar-item { padding: 15px 20px; color: white; cursor: pointer; font-weight: 600; border-radius: 10px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; }
+        .sidebar-item:hover { background: rgba(255,255,255,0.15); color: var(--fc-yellow); }
+
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); z-index: 999; }
+        .overlay.active { display: block; }
+
+        .header-brand { background: var(--fc-blue); padding: 60px 20px 120px; text-align: center; }
+        .brand-name img { height: 50px; width: auto; display: block; margin: 0 auto; }
+        .brand-name span { color: white; font-size:12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-top: 15px; }
+
+        .container { width: 92%; max-width: 850px; margin: -70px auto 40px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; position: relative; }
+        .view-section { display: none; padding: 40px 30px; position: relative; }
+        .view-section.active { display: block; }
+
+        .btn-close { position: absolute; top: 20px; right: 20px; background: #f1f5f9; border: none; width: 35px; height: 35px; border-radius: 50%; color: var(--text-muted); font-size: 18px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+
+        .search-highlight { background: #fffbeb; border: 2px solid var(--fc-yellow); border-radius: 15px; margin-bottom: 20px; padding: 15px; display: none; }
+        .search-highlight.active { display: block; }
+
+        .placa-badge { background: white; color: #333; padding: 4px 12px; border: 2px solid #333; border-radius: 6px; font-weight: 800; font-size: 18px; position: relative; overflow: hidden; min-width: 110px; text-align: center; }
+        .placa-badge::before { content: "BRASIL"; display: block; font-size: 7px; background: #003399; color: white; margin: -4px -12px 4px -12px; padding: 2px 0; }
+
+        #search { width: 100%; padding: 18px 25px; border: 2px solid var(--border); border-radius: 15px; margin-bottom: 25px; box-sizing: border-box; font-size: 16px; outline: none; }
+        table { width: 100%; border-collapse: separate; }
+        .row-setor { background: #f1f5f9; }
+        .row-setor td { padding: 12px 20px; font-weight: 800; color: var(--fc-blue); text-transform: uppercase; font-size: 12px; }
+        td { padding: 20px; border-bottom: 1px solid var(--border); }
+
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .form-group.full { grid-column: span 2; }
+        .form-group label { display: block; font-size: 11px; font-weight: 700; color: var(--fc-blue); margin-bottom: 5px; }
+        .form-group input { width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: 10px; box-sizing: border-box; outline: none; transition: 0.2s; }
+        
+        .btn-save { background: var(--fc-blue); color: white; border: none; padding: 18px; width: 100%; border-radius: 12px; font-weight: 700; cursor: pointer; margin-top: 20px; }
+        .btn-action { border: none; padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; margin-left: 5px; }
+        .btn-edit { background: #e2e8f0; color: var(--fc-blue); }
+        .btn-delete { background: #fee2e2; color: var(--fc-red); }
+
+        .tag-matricula { background: #e2e8f0; color: #475569; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+        .car-model-label { color: var(--fc-blue); font-weight: 800; font-size: 16px; text-transform: uppercase; margin-bottom: 4px; }
+        footer { text-align: center; padding: 30px; font-size: 13px; color: var(--text-muted); }
